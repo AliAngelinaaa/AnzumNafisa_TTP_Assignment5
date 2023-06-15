@@ -3,13 +3,23 @@
     //set a global variable for color
     let selectedColor;
   
+    //This method will add a row to the table, first check if there is an existing number of columns, 
+    //if yes, then add a row and add the number of cells according to the number of columns.
+    //If false, then add a row and change the number of columns to 1.
     function addRows(){
       var table = document.getElementById("grid");
       let newRow = table.insertRow();
-      console.log(table.cells);
-      let cell = newRow.insertCell(0);
-      cell.classList.add("cell");
-      cell.style.backgroundColor="white";
+      if(table.rows[0].cells.length>0){
+        for(let i=0;i<table.rows[0].cells.length;i++){
+          let cell = newRow.insertCell(i);
+          cell.classList.add("cell");
+          cell.style.backgroundColor="white";
+        }
+      }else{
+        let cell = newRow.insertCell(0);
+        cell.classList.add("cell");
+        cell.style.backgroundColor="white";
+      }
     }
 
     //this method will remove the last row of the table
