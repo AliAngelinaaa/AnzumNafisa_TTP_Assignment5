@@ -14,18 +14,24 @@
     var cell = grid.lastElementChild;
     cell.remove();
  }
+
+//restore the color of every cell to inital color
  function clearColor(){
   var cell = document.querySelectorAll(".cell");
    cell.forEach((ele)=>{
     ele.style.backgroundColor = "white";
   });
  }
+
+//change the color of every cell to the selected color
  function changeColor(){
   var cell = document.querySelectorAll(".cell");
   cell.forEach((ele)=>{
     ele.style.backgroundColor = selectedColor;
   });
  }
+
+//fill the uncolored cell to the selected color
  function fillUncolored(){
   var cell = document.querySelectorAll(".cell");
   cell.forEach((ele)=>{
@@ -36,6 +42,7 @@
   });
  }
 
+//change to the color selected by user
 function pickColor(){
   const paint = document.getElementById("colorSelect");
   selectedColor = paint.value;
