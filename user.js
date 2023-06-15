@@ -36,10 +36,10 @@
   });
  }
 
-document.addEventListener("click", function() {
-  const colorSelect = document.getElementById("colorSelect");
-  selectedColor = colorSelect.value;
-  colorSelect.addEventListener("change", function() {
-    selectedColor = colorSelect.value;
+function pickColor(){
+  const paint = document.getElementById("colorSelect");
+  selectedColor = paint.value;
+  paint.addEventListener("change", function() {
+    selectedColor = paint.value;
   });
-});
+}

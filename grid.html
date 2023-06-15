@@ -13,8 +13,8 @@
     }
     
     .cell{
-      background-color:orange;
-      border: 1px solid #888;
+      background-color:white;
+      border: 1px solid black;
     }
   </style>
   <script text="text/script" src="user.js"></script>
@@ -29,7 +29,8 @@
   <p><button onclick="fillUncolored()">Fill Uncolored</button></p>
   <div>
     <label for="colorSelect">Choose Color:</label>
-    <select id="colorSelect">
+    <select id="colorSelect" onclick = "pickColor()">
+      <option>Options</option>
       <option value="red">Red</option>
       <option value="blue">Blue</option>
       <option value="green">Green</option>
